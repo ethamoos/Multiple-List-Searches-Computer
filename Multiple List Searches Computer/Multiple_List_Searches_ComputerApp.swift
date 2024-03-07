@@ -11,7 +11,7 @@ import SwiftUI
 struct Multiple_List_Searches_ComputerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }

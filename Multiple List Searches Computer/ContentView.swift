@@ -7,6 +7,23 @@
 
 import SwiftUI
 
+struct MainView: View {
+    var body: some View {
+        TabView {
+            ContentView()
+                .tabItem {
+                    Label("Computers", systemImage: "list.dash")
+                }
+
+            SecondView()
+                .tabItem {
+                    Label("Policies", systemImage: "square.and.pencil")
+                }
+        }
+    }
+}
+
+
 struct ContentView: View {
     
     let computers = ["Big Mac", "Mac Mini", "iBook" ]
@@ -31,8 +48,6 @@ struct ContentView: View {
             .searchable(text: $searchText)
         }
         .padding()
-
-        SecondView()
 
     }
     
