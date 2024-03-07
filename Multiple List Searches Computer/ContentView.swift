@@ -67,6 +67,7 @@ struct ContentView: View {
 struct SecondView: View {
     
     let policies = ["Do hoovering", "Auto-Sandwich", "Water Plants"]
+    
     @State var searchText = ""
     @State var selection = Set<String>()
         
