@@ -7,8 +7,29 @@
 
 import SwiftUI
 
+
+class MainBrain: ObservableObject {
+    
+    @Published var computerSelection = Set<String>()
+    @Published var groupSelection: String = ""
+    
+}
+
 struct MainView: View {
+    
+    @EnvironmentObject var mainBrain: MainBrain
+
     var body: some View {
+        
+        VStack {
+            
+            Text("Computer Search is:\(String(describing: mainBrain.computerSelection))")
+            
+            Text("Group Search is:\(String(describing:mainBrain.groupSelection))")
+            
+        }
+        .padding()
+
         TabView {
             ContentView()
                 .tabItem {
@@ -17,7 +38,7 @@ struct MainView: View {
 
             SecondView()
                 .tabItem {
-                    Label("Policies", systemImage: "square.and.pencil")
+                    Label("Groups", systemImage: "square.and.pencil")
                 }
         }
     }
@@ -26,10 +47,11 @@ struct MainView: View {
 
 struct ContentView: View {
     
+    @EnvironmentObject var mainBrain: MainBrain
+
     let computers = ["Big Mac", "Mac Mini", "iBook" ]
     
     @State var searchText = ""
-    @State var selection = Set<String>()
     
     var body: some View {
         
@@ -37,7 +59,7 @@ struct ContentView: View {
         VStack(alignment: .leading) {
 
             Text("Computers").bold()
-            List(searchResults, id: \.self, selection: $selection) { computer in
+            List(searchResults, id: \.self, selection: $mainBrain.computerSelection) { computer in
                 
                 HStack {
                     Image(systemName: "apple.logo")
@@ -53,7 +75,7 @@ struct ContentView: View {
     
     var searchResults: [String] {
         if searchText.isEmpty {
-            print("Policy search is empty")
+            print("Group search is empty")
             return computers
         } else {
             print("Computer search added - item is:\(searchText)")
@@ -66,7 +88,9 @@ struct ContentView: View {
 
 struct SecondView: View {
     
-    let policies = ["Do hoovering", "Auto-Sandwich", "Water Plants"]
+    @EnvironmentObject var mainBrain: MainBrain
+    
+    let groups = ["Kitchen", "Lounge", "Bedroom"]
     
     @State var searchText = ""
     @State var selection = Set<String>()
@@ -75,13 +99,13 @@ struct SecondView: View {
         
         VStack(alignment: .leading) {
             
-            Text("Policies").bold()
+            Text("Groups").bold()
 
-            List(searchResults, id: \.self, selection: $selection) { policy in
+            List(searchResults, id: \.self, selection: $mainBrain.groupSelection) { group in
                 
                 HStack {
                     Image(systemName: "house")
-                    Text(policy ).font(.system(size: 12.0)).foregroundColor(.blue)
+                    Text(group ).font(.system(size: 12.0)).foregroundColor(.blue)
                 }
                 .foregroundColor(.blue)
             }
@@ -92,11 +116,11 @@ struct SecondView: View {
     
     var searchResults: [String] {
         if searchText.isEmpty {
-            print("Policy search  is empty")
-            return policies
+            print("Group search  is empty")
+            return groups
         } else {
-            print("Policy search Added")
-            return policies.filter { $0.contains(searchText) }
+            print("Group search Added")
+            return groups.filter { $0.contains(searchText) }
         }
     }
 }

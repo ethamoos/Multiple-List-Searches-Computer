@@ -8,10 +8,20 @@
 import SwiftUI
 
 @main
+
+
 struct Multiple_List_Searches_ComputerApp: App {
+    
+    let mainBrain: MainBrain
+
+    init() {
+        self.mainBrain = MainBrain()
+    }
+
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(mainBrain)
         }
     }
 }
