@@ -93,7 +93,6 @@ struct SecondView: View {
     let groups = ["Kitchen", "Lounge", "Bedroom"]
     
     @State var searchText = ""
-    @State var selection = Set<String>()
         
     var body: some View {
         
