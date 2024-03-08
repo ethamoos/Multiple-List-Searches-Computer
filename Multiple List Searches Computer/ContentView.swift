@@ -23,9 +23,9 @@ struct MainView: View {
         
         VStack {
             
-            Text("Computer Search is:\(String(describing: mainBrain.computerSelection))")
+            Text("Computer Selection is:\(String(describing: mainBrain.computerSelection))")
             
-            Text("Group Search is:\(String(describing:mainBrain.groupSelection))")
+            Text("Group Selection is:\(String(describing:mainBrain.groupSelection))")
             
         }
         .padding()
