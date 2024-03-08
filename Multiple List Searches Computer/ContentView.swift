@@ -21,7 +21,7 @@ struct MainView: View {
 
     var body: some View {
         
-        VStack {
+        VStack(alignment: .leading) {
             
             Text("Computer Selection is:\(String(describing: mainBrain.computerSelection))")
             
