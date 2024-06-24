@@ -7,11 +7,26 @@
 
 import SwiftUI
 
-@main
+
+
+
+
 struct Multiple_List_Searches_ComputerApp: App {
+    
+    
+
+    let networkController: NetworkController
+
+
+    init() {
+        self.networkController = NetworkController()
+
+    }
+    
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(networkController)
         }
     }
 }

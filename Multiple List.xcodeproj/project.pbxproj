@@ -14,6 +14,8 @@
 		A8AF34152B9A5E4A00C168A1 /* Multiple_List_Searches_ComputerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AF34142B9A5E4A00C168A1 /* Multiple_List_Searches_ComputerTests.swift */; };
 		A8AF341F2B9A5E4A00C168A1 /* Multiple_List_Searches_ComputerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AF341E2B9A5E4A00C168A1 /* Multiple_List_Searches_ComputerUITests.swift */; };
 		A8AF34212B9A5E4A00C168A1 /* Multiple_List_Searches_ComputerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AF34202B9A5E4A00C168A1 /* Multiple_List_Searches_ComputerUITestsLaunchTests.swift */; };
+		E4A542A92C2A106B00C4887C /* ComplexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A542A82C2A106B00C4887C /* ComplexView.swift */; };
+		E4A542AB2C2A10DF00C4887C /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A542AA2C2A10DF00C4887C /* NetworkController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		A8AF341A2B9A5E4A00C168A1 /* Multiple List Searches ComputerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Multiple List Searches ComputerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8AF341E2B9A5E4A00C168A1 /* Multiple_List_Searches_ComputerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiple_List_Searches_ComputerUITests.swift; sourceTree = "<group>"; };
 		A8AF34202B9A5E4A00C168A1 /* Multiple_List_Searches_ComputerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiple_List_Searches_ComputerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E4A542A82C2A106B00C4887C /* ComplexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexView.swift; sourceTree = "<group>"; };
+		E4A542AA2C2A10DF00C4887C /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			children = (
 				A8AF34022B9A5E4600C168A1 /* Multiple_List_Searches_ComputerApp.swift */,
 				A8AF34042B9A5E4600C168A1 /* ContentView.swift */,
+				E4A542A82C2A106B00C4887C /* ComplexView.swift */,
+				E4A542AA2C2A10DF00C4887C /* NetworkController.swift */,
 				A8AF34062B9A5E4A00C168A1 /* Assets.xcassets */,
 				A8AF34082B9A5E4A00C168A1 /* Multiple_List_Searches_Computer.entitlements */,
 				A8AF34092B9A5E4A00C168A1 /* Preview Content */,
@@ -259,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4A542AB2C2A10DF00C4887C /* NetworkController.swift in Sources */,
 				A8AF34052B9A5E4600C168A1 /* ContentView.swift in Sources */,
+				E4A542A92C2A106B00C4887C /* ComplexView.swift in Sources */,
 				A8AF34032B9A5E4600C168A1 /* Multiple_List_Searches_ComputerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
